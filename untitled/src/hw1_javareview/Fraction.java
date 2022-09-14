@@ -9,7 +9,7 @@ public class Fraction {
         int denominator1 = sc.nextInt();
         int numerator2 = sc.nextInt();
         int denominator2 = sc.nextInt();
-        if (denominator1 != 0 && denominator1 != 0) {
+        if (denominator1 != 0 && denominator2 != 0) {
             System.out.println("fraction 1: " + numerator1 + "/" + denominator1);
             System.out.println("fraction 2: " + numerator2 + "/" + denominator2);
             plus(numerator1, denominator1, numerator2, denominator2);
@@ -21,6 +21,7 @@ public class Fraction {
         }
     }
 
+    //Tong 2 phan so
     public static void plus(int numerator1, int denominator1, int numerator2, int denominator2) {
         int numerator;
         int denominator;
@@ -35,6 +36,7 @@ public class Fraction {
         compact(numerator, denominator);
     }
 
+    //Hieu 2 phan so
     public static void minus(int numerator1, int denominator1, int numerator2, int denominator2) {
         int numerator;
         int denominator;
@@ -49,6 +51,7 @@ public class Fraction {
         compact(numerator, denominator);
     }
 
+    //Nhan 2 phan so
     public static void times(int numerator1, int denominator1, int numerator2, int denominator2) {
         int numerator = numerator1 * numerator2;
         int denominator = denominator1 * denominator2;
@@ -56,6 +59,7 @@ public class Fraction {
         compact(numerator, denominator);
     }
 
+    //Chia 2 phan so
     public static void division(int numerator1, int denominator1, int numerator2, int denominator2) {
         int numerator;
         int denominator;
@@ -66,6 +70,7 @@ public class Fraction {
     }
 
 
+    //Rut gon phan so
     public static void compact(int numerator, int denominator) {
         int gcd = gcd(numerator, denominator);
         numerator = numerator / gcd;
@@ -78,7 +83,10 @@ public class Fraction {
         }
     }
 
+    //Tim uoc chung lon nhat
     public static int gcd(int a, int b) {
+        a = Math.abs(a);
+        b = Math.abs(b);
         if (b == 0) {
             return a;
         }
