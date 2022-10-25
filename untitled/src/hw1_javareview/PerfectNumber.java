@@ -19,6 +19,7 @@ public class PerfectNumber {
         }
     }
 
+    //kiem tra so hoan hao
     public static boolean perfectNumber(int m) {
         int sum = 0;
         for (int i = 1; i <= m / 2; i++) {
